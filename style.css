@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url(background.jpg) no-repeat;
+    background-size: cover;
+}
+
+#game-container {
+    background-color: rgba(15, 15, 15,.75);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    
+}
+
+#target {
+    font-size: 2.5rem;
+    color: #2ecc71;
+    margin-bottom: 10px;
+}
+
+#progress-bar {
+    height: 10px;
+    background-color: #95a5a6;
+    margin-bottom: 20px;
+}
+
+#progress-bar::before {
+    content: '';
+    display: block;
+    height: 100%;
+    background-color: #2ecc71;
+    width: 0%;
+    transition: width 0.5s;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(var(--gridSize,10), 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    background-color: transparent;
+    color: #aaa;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cell.selected {
+    background-color: transparent;
+    color: #fff;
+    font-weight: bold;
+}
+
+#timer {
+    font-size: 24px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+#instructions {
+    color: #bdc3c7;
+}
